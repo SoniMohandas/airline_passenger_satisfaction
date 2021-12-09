@@ -7,5 +7,6 @@ This project is an airline passenger satisfaction prediction with train and test
 ![airline](https://user-images.githubusercontent.com/83611005/143969976-9a91f465-d508-4f77-975f-15b86bb3d99c.png)
 
 * Age group Airline Passenger Satisaction.
-* ![age_group_satisfaction](https://user-images.githubusercontent.com/83611005/145314770-2d53e678-45aa-456f-925f-46d37902a200.png)
+* 
 
+![age_group_satisfaction](https://user-images.githubusercontent.com/83611005/145314909-edcbea42-d390-4598-a8f4-26e36a3bf292.png)
