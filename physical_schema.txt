@@ -1,0 +1,56 @@
+Physical schema (with constraints)
+
+1.  Passanger
+    ---------
+    Passenger_ID  INT PK
+    Gender VARCHAR(6) NOT NULL
+    Customer_type VARCHAR(25)
+    Age INT NOT NULL
+    Travel_type VARCHAR(25)
+    Satisfaction VARCHAR(35)
+    Booking_ID INT FK - Online_Services.Booking_ID
+    
+    
+2.  Flight
+    ------
+    Flight_ID SERIAL PK
+    Class VARCHAR(25) NOT NULL
+    Seat_comfort INT
+    Flight_distance INT NOT NULL
+    Cleanliness INT
+    Dep_Arr_ID INT FK - Departure_Arrival.Dep_Arr_ID
+    IS_ID INT FK - Services_Inflight.IS_ID
+    
+3.  Departure_Arrival
+    -----------------
+    Dep_Arr_ID SERIAL PK
+    Time_Convenience INT
+    Departure_Delay INT
+    Arrival_Delay INT
+    
+    
+4.  Services_Inflight
+    -----------------
+    IS_ID  SERIAL PK
+    Wifi INT
+    Entertainment INT
+    Inflight_service INT
+    Food_drink INT
+    Onboard_service INT
+    Legroom_service INT   
+    
+    
+5.  Online_Services
+    ---------------
+    Booking_ID SERIAL PK
+    Ease_of_online_booking INT
+    Online_boarding INT
+    
+    
+6.  Airline_Services
+    ----------------
+    AS_ID SERIAL PK
+    Checkin_service INT
+    Gate_location INT
+    Baggage_handling INT
+    Passenger_ID INT FK - Passenger.Passenger_ID
