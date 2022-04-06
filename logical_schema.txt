@@ -49,7 +49,7 @@ Logical Schema (Entity with attributes, primary key, and foreign key)
     
 6.  Airline_Services
     ----------------
-    Airline_Service_ID  PK
+    AS_ID  PK
     Checkin_service
     Gate_location
     Baggage_handling
