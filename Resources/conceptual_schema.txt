@@ -1,0 +1,50 @@
+Conceptual model without relationship
+
+1.  passanger
+    -
+        
+    
+2.  Flight
+    -
+    
+    
+3.  Departure_Arrival
+    -    
+    
+    
+4.  Services_Inflight
+    -    
+    
+    
+5.  Online_Services
+    -
+        
+    
+6.  Airline_Services
+    -
+    
+    
+Conceptual model with relationship
+
+1.  passanger
+    -
+        
+    
+2.  Flight
+    -
+    
+    
+3.  Departure_Arrival
+    -    
+    
+    
+4.  Services_Inflight
+    -    
+    
+    
+5.  Online_Services
+    -
+        
+    
+6.  Airline_Services
+    -
