@@ -51,4 +51,5 @@ Conceptual model with relationship
     
 6.  Airline_Services
     rel Passanger
+    rel Flight
     -

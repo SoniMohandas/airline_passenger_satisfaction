@@ -18,15 +18,15 @@ Physical schema (with constraints)
     Seat_comfort INT
     Flight_distance INT NOT NULL
     Cleanliness INT
-    Dep_Arr_ID INT FK - Departure_Arrival.Dep_Arr_ID
+    Dep_arr_ID INT FK - Departure_Arrival.Dep_Arr_ID
     IS_ID INT FK - Services_Inflight.IS_ID
     
 3.  Departure_Arrival
     -----------------
-    Dep_Arr_ID SERIAL PK
-    Time_Convenience INT
-    Departure_Delay INT
-    Arrival_Delay INT
+    Dep_arr_ID SERIAL PK
+    Time_convenience INT
+    Departure_delay INT
+    Arrival_delay INT
     
     
 4.  Services_Inflight
@@ -54,3 +54,4 @@ Physical schema (with constraints)
     Gate_location INT
     Baggage_handling INT
     Passenger_ID INT FK - Passenger.Passenger_ID
+    Flight_ID INT FK - f.Flight_ID

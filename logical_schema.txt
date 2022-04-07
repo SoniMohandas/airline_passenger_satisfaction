@@ -54,3 +54,4 @@ Logical Schema (Entity with attributes, primary key, and foreign key)
     Gate_location
     Baggage_handling
     Passenger_ID FK - Passenger.Passenger_ID
+    Flight_ID INT FK - f.Flight_ID
