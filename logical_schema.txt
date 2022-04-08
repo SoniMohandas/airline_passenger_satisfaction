@@ -1,58 +1,57 @@
 Logical Schema (Entity with attributes, primary key, and foreign key)
 
-1.  Passanger
+1.  passanger
     ---------
-    PassengerID  PK
-    Gender
-    CustomerType
-    Age
-    TravelType
-    Satisfaction
-    FlightID FK >-< Flight.FlightID
-    BookingID  FK -< OnlineServices.BookingID
-    InflightServiceID FK >- InflightServices.InflightServiceID
-    AirlineServiceID FK >-AirlineServices.ArilineServiceID    
-    
-    
-2.  Flights
+    passenger_id  PK
+    gender
+    customer_type
+    age
+    travel_type
+    satisfaction
+    flight_id FK >-< flights.flight_id
+    booking_id  FK -< online_services.booking_id
+    inflight_service_id FK >- inflight_ervices.inflight_service_id
+    airline_service_id FK >-airline_services.airline_service_id    
+2.  flights
     ------
-    FlightID  PK
-    Class
-    SeatComfort
-    FlightDistance    
-    Cleanliness
-    DepartArriveID FK >- DepartureArrival.DepartArriveID    
+    flight_id  PK
+    class
+    seat_comfort
+    flight_distance    
+    cleanliness
+    depart_arrive_id FK >- departure_arrival.depart_arrive_id
     
-3.  DepartureArrival
+    
+3.  departure_arrival
     -----------------
-    DepartArriveID  PK
-    TimeConvenience
-    DepartureDelay
-    ArrivalDelay
+    depart_arrive_id  PK
+    time_convenience
+    departure_delay
+    arrival_delay
     
     
-4.  InflightServices
+4.  inflight_services
     -----------------
-    InflightServiceID  PK
-    Wifi
-    Entertainment
-    InflightService
-    FoodDrink
-    OnboardService
-    LegroomService    
+    inflight_service_id  PK
+    wifi
+    entertainment
+    inflight_service
+    food_drink
+    onboard_service
+    legroom_service    
     
     
-5.  OnlineServices
+5.  online_services
     ---------------
-    BookingID  PK
-    EaseOfOnlineBooking
-    OnlineBoarding   
+    booking_id  PK
+    ease_of_online_booking
+    online_boarding   
     
     
-6.  AirlineServices
+6.  airline_services
     ----------------
-    AirlineServiceID  PK
-    CheckinService
-    GateLocation
-    BaggageHandling
+    airline_service_id  PK
+    checkin_service
+    gate_location
+    baggage_handling
     

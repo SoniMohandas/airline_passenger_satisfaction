@@ -1,55 +1,55 @@
 Conceptual model without relationship
 
-1.  Passanger
+1.  passanger
     -
         
     
-2.  Flights
+2.  flights
     -
     
     
-3.  DepartureArrival
+3.  departure_arrival
     -    
     
     
-4.  InflightServices
+4.  inflight_services
     -    
     
     
-5.  OnlineServices
+5.  online_services
     -
         
     
-6.  AirlineServices
+6.  airline_services
     -
     
     
 Conceptual model with relationship
 
-1.  Passanger
-    rel OnlineServices
-    rel Flight
-    rel ArilineServices
-    rel InflightServices
+1.  passanger
+    rel flights
+    rel online_services
+    rel inflight_services
+    rel airline_services
     -
         
     
-2.  Flight
-    rel DepartureArrival
+2.  flights
+    rel departure_arrival    
     -
     
     
-3.  DepartureArrival    
+3.  departure_arrival    
     -    
     
     
-4.  InflightServices
+4.  services_inflight
     -    
     
     
-5.  OnlineServices
+5.  online_services
     -
         
     
-6.  AirlineServices
+6.  airline_services    
     -

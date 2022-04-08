@@ -1,59 +1,59 @@
 Physical schema (with constraints)
 
-1.  Passanger
+1.  passanger
     ---------
-    PassengerID  INT PK
-    Gender VARCHAR(6) NOT NULL
-    CustomerType VARCHAR(25) NULL
-    Age INT NOT NULL
-    Travel_type VARCHAR(25) NULL
-    Satisfaction VARCHAR(35) NULL
-    FlightID FK >-< Flight.FlightID
-    BookingID  FK -< OnlineServices.BookingID
-    InflightServiceID FK >- InflightServices.InflightServiceID
-    AirlineServiceID FK >-AirlineServices.ArilineServiceID
+    passenger_id  INT PK
+    gender VARCHAR(6) NOT NULL
+    customer_type VARCHAR(25) NULL
+    age INT NOT NULL
+    travel_type VARCHAR(25) NULL
+    satisfaction VARCHAR(35) NULL
+    flight_id FK >-< flights.flight_id
+    booking_id  FK -< online_services.booking_id
+    inflight_service_id FK >- inflight_ervices.inflight_service_id
+    airline_service_id FK >-airline_services.airline_service_id 
     
     
-2.  Flights
+2.  flights
     ------
-    FlightID SERIAL PK
-    Class VARCHAR(25) NOT NULL
-    SeatComfort INT NULL
-    FlightDistance INT NOT NULL
-    Cleanliness INT NULL
-    DepartArriveID FK >- DepartureArrival.DepartArriveID
+    flight_id SERIAL PK
+    class VARCHAR(25) NOT NULL
+    seat_comfort INT NULL
+    flight_distance INT NOT NULL
+    cleanliness INT NULL
+    depart_arrive_id FK >- departure_arrival.depart_arrive_id
     
     
-3.  DepartureArrival
+3.  departure_arrival
     -----------------
-    DepartArriveID SERIAL PK
-    TimeConvenience INT NULL
-    DepartureDelay INT NULL
-    ArrivalDelay INT NULL
+    depart_arrive_id SERIAL PK
+    time_convenience INT NULL
+    departure_delay INT NULL
+    arrival_delay INT NULL
     
     
-4.  InflightServices
+4.  inflight_services
     -----------------
-    InflightServiceID  SERIAL PK
-    Wifi INT NULL
-    Entertainment INT NULL
-    InflightService INT NULL
-    FoodDrink INT NULL
-    OnboardService INT NULL
-    LegroomService INT NULL
+    inflight_service_id  SERIAL PK
+    wifi INT NULL
+    entertainment INT NULL
+    inflight_service INT NULL
+    food_drink INT NULL
+    onboard_service INT NULL
+    legroom_service INT NULL
     
     
-5.  OnlineServices
+5.  online_services
     ---------------
-    BookingID SERIAL PK
-    EaseOfOnlineBooking INT NULL
-    OnlineBoarding INT NULL
+    booking_id SERIAL PK
+    ease_of_online_booking INT NULL
+    online_boarding INT NULL
     
     
-6.  AirlineServices
+6.  airline_services
     ----------------
-    AirlineServiceID SERIAL PK
-    CheckinService INT NULL
-    GateLocation INT NULL
-    BaggageHandling INT NULL
+    airline_service_id SERIAL PK
+    checkin_service INT NULL
+    gate_location INT NULL
+    baggage_handling INT NULL
     
