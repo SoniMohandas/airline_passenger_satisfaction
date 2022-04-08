@@ -1,4 +1,4 @@
-# Airline Passenger Satisfaction
+# Airline Passenger Satisfaction (Applied Machine Learning and ETL process)
 This project is an airline passenger satisfaction prediction with train and test data.  Machine Learning models, Logistic Regression and Random Forest Classifier are applied in this challenge.  Using standard scaler with logistic regression model predicts the desired result which is neither overfitting nor underfitting.
 Pandas library sqlalchemy used to load file into postgresql database. Created conceputal schema, logical schema, physical schema and sql schema.  24 featured data set is seperated into 6 tables based on features.
 
