@@ -2,56 +2,58 @@ Physical schema (with constraints)
 
 1.  Passanger
     ---------
-    Passenger_ID  INT PK
+    PassengerID  INT PK
     Gender VARCHAR(6) NOT NULL
-    Customer_type VARCHAR(25)
+    CustomerType VARCHAR(25) NULL
     Age INT NOT NULL
-    Travel_type VARCHAR(25)
-    Satisfaction VARCHAR(35)
-    Booking_ID INT FK - Online_Services.Booking_ID
+    Travel_type VARCHAR(25) NULL
+    Satisfaction VARCHAR(35) NULL
+    FlightID FK >-< Flight.FlightID
+    BookingID  FK -< OnlineServices.BookingID
+    InflightServiceID FK >- InflightServices.InflightServiceID
+    AirlineServiceID FK >-AirlineServices.ArilineServiceID
     
     
-2.  Flight
+2.  Flights
     ------
-    Flight_ID SERIAL PK
+    FlightID SERIAL PK
     Class VARCHAR(25) NOT NULL
-    Seat_comfort INT
-    Flight_distance INT NOT NULL
-    Cleanliness INT
-    Dep_arr_ID INT FK - Departure_Arrival.Dep_Arr_ID
-    IS_ID INT FK - Services_Inflight.IS_ID
+    SeatComfort INT NULL
+    FlightDistance INT NOT NULL
+    Cleanliness INT NULL
+    DepartArriveID FK >- DepartureArrival.DepartArriveID
     
-3.  Departure_Arrival
+    
+3.  DepartureArrival
     -----------------
-    Dep_arr_ID SERIAL PK
-    Time_convenience INT
-    Departure_delay INT
-    Arrival_delay INT
+    DepartArriveID SERIAL PK
+    TimeConvenience INT NULL
+    DepartureDelay INT NULL
+    ArrivalDelay INT NULL
     
     
-4.  Services_Inflight
+4.  InflightServices
     -----------------
-    IS_ID  SERIAL PK
-    Wifi INT
-    Entertainment INT
-    Inflight_service INT
-    Food_drink INT
-    Onboard_service INT
-    Legroom_service INT   
+    InflightServiceID  SERIAL PK
+    Wifi INT NULL
+    Entertainment INT NULL
+    InflightService INT NULL
+    FoodDrink INT NULL
+    OnboardService INT NULL
+    LegroomService INT NULL
     
     
-5.  Online_Services
+5.  OnlineServices
     ---------------
-    Booking_ID SERIAL PK
-    Ease_of_online_booking INT
-    Online_boarding INT
+    BookingID SERIAL PK
+    EaseOfOnlineBooking INT NULL
+    OnlineBoarding INT NULL
     
     
-6.  Airline_Services
+6.  AirlineServices
     ----------------
-    AS_ID SERIAL PK
-    Checkin_service INT
-    Gate_location INT
-    Baggage_handling INT
-    Passenger_ID INT FK - Passenger.Passenger_ID
-    Flight_ID INT FK - f.Flight_ID
+    AirlineServiceID SERIAL PK
+    CheckinService INT NULL
+    GateLocation INT NULL
+    BaggageHandling INT NULL
+    

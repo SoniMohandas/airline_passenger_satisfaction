@@ -2,56 +2,57 @@ Logical Schema (Entity with attributes, primary key, and foreign key)
 
 1.  Passanger
     ---------
-    Passenger_ID  PK
+    PassengerID  PK
     Gender
-    Customer_type
+    CustomerType
     Age
-    Travel_type
+    TravelType
     Satisfaction
-    Booking_ID  FK - Online_Services.Booking_ID
+    FlightID FK >-< Flight.FlightID
+    BookingID  FK -< OnlineServices.BookingID
+    InflightServiceID FK >- InflightServices.InflightServiceID
+    AirlineServiceID FK >-AirlineServices.ArilineServiceID    
     
     
-2.  Flight
+2.  Flights
     ------
-    Flight_ID  PK
+    FlightID  PK
     Class
-    Seat_comfort
-    Flight_distance    
+    SeatComfort
+    FlightDistance    
     Cleanliness
-    Dep_Arr_ID FK - Departure_Arrival.Dep_Arr_ID
-    IS_ID FK - Services_Inflight.IS_ID
+    DepartArriveID FK >- DepartureArrival.DepartArriveID    
     
-3.  Departure_Arrival
+3.  DepartureArrival
     -----------------
-    Dep_Arr_ID  PK
-    Convenience
-    Departure_delay
-    Arrival_delay
+    DepartArriveID  PK
+    TimeConvenience
+    DepartureDelay
+    ArrivalDelay
     
     
-4.  Services_Inflight
+4.  InflightServices
     -----------------
-    IS_ID  PK
+    InflightServiceID  PK
     Wifi
     Entertainment
-    Inflight_service
-    Food_drink
-    Onboard_service
-    Legroom_service    
+    InflightService
+    FoodDrink
+    OnboardService
+    LegroomService    
     
     
-5.  Online_Services
+5.  OnlineServices
     ---------------
-    Booking_ID  PK
-    Ease_of_online_booking
-    Online_boarding   
+    BookingID  PK
+    EaseOfOnlineBooking
+    OnlineBoarding   
     
     
-6.  Airline_Services
+6.  AirlineServices
     ----------------
-    AS_ID  PK
-    Checkin_service
-    Gate_location
-    Baggage_handling
-    Passenger_ID FK - Passenger.Passenger_ID
-    Flight_ID INT FK - f.Flight_ID
+    AirlineServiceID  PK
+    CheckinService
+    GateLocation
+    BaggageHandling
+    
